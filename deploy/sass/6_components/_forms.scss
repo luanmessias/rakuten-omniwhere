@@ -2,6 +2,26 @@
     @include flexbox(row, wrap, space-between, flex-end, center);
     @include transition;
     padding: 20px 0px;
+
+    .form__block.grid input:not([type="submit"]){
+        @include box-sizing;
+        @include remove-shadow;
+        @include border-radius(5px);
+        @include transition;
+        //@include box-shadow(1px, 1px, 1px, #c1c2c2, inset);
+        width: 100%;
+        padding: 10px 15px;
+        background-color: #f3f1f6;
+        border: 0px solid $color-gray;
+
+        &:hover,
+        &:active,
+        &:focus{
+            border-color: $color-red;
+        }
+
+    }
+
 }
 
 .form,

@@ -24,7 +24,6 @@
     background-color: #f3f1f6;
     border: 0px solid $color-gray;
     
-    
     &:hover,
     &:active,
     &:focus{
@@ -35,21 +34,18 @@
 
 @media only screen and (max-width: 995px) {
     html{
-        overflow: scroll;
+        overflow: scroll !important;
     }
 
     #menu{
         display: none;
     }
     
-
-
     .section{
         @include flexbox(column, nowrap, center, center, center);
         width: 100%;
         min-height: auto;
-        height: auto;
-        
+        height: auto; 
     }
 
     .header__arrow{
