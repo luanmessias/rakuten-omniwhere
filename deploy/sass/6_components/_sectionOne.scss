@@ -1,0 +1,56 @@
+#section1{
+    background-image: url('https://digitalcommerce.rakuten.com.br/wp-content/uploads/2018/10/section1_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    .pp-tableCell{
+        @include flexbox(column, wrap, center, center, center);
+       
+    }
+
+    .logo{
+        @include flexbox(row, wrap, center, center, center);
+        @include animate(fadeInDown, 0s);
+        margin-top: 40px;
+
+        @include e('rakuten'){
+            img{
+                width: 100%;
+                max-width: 238px;
+            }
+        }
+
+        @include e('separate'){
+            @include opacity(.5);
+            display: block;
+            margin: 0px 35px;
+            width: 2px;
+            height: 80px;
+            background-color: #FFF;
+        }
+
+        @include e('omniwhere'){
+            img{
+                width: 100%;
+                max-width: 468px;
+            }
+        }
+
+    } 
+    .header__info{
+        @include fonte($second-font, 300, 24px, #FFF);
+        @include animate(fadeInDown, .5s);
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 40px;
+        line-height: 30px;
+    }
+
+    .header__arrow{
+        @include animate(fadeInDown, 1s);
+        margin-top: 45px;
+    }
+
+
+}

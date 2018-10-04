@@ -1,0 +1,78 @@
+
+.section{
+    display: flex !important;
+    @include flexbox(column, nowrap, center, center, center);
+}
+
+#pp-nav{
+    display: none;
+}
+
+.wpcf7,
+.wpcf7-form{
+    width: 100%;
+}
+
+.form__block__control{
+    @include box-sizing;
+    @include remove-shadow;
+    @include border-radius(5px);
+    @include transition;
+    //@include box-shadow(1px, 1px, 1px, #c1c2c2, inset);
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #f3f1f6;
+    border: 0px solid $color-gray;
+    
+    
+    &:hover,
+    &:active,
+    &:focus{
+        border-color: $color-red;
+    }
+}
+
+
+@media only screen and (max-width: 995px) {
+    html{
+        overflow: scroll;
+    }
+
+    #menu{
+        display: none;
+    }
+    
+
+
+    .section{
+        @include flexbox(column, nowrap, center, center, center);
+        width: 100%;
+        min-height: auto;
+        height: auto;
+        
+    }
+
+    .header__arrow{
+        display: none;
+    }
+
+    #section1{
+        padding: 50px 0px;
+        .logo__separate{
+            display: none;
+        }
+
+        .logo__omniwhere{
+            @include box-sizing;
+            display: block;
+            width: 100%;
+            padding: 5px;
+        }
+
+    }
+
+    #section3 div.footer{
+        position: inherit;
+    }
+
+}

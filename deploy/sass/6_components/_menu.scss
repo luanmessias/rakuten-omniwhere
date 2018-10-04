@@ -1,0 +1,68 @@
+#menu {
+    @include flexbox(row, wrap, center, center, center);
+    @include box-sizing;
+    position: fixed;
+    top: 10px;
+    text-align: center;
+    z-index: 9999;
+    width: 100%;
+    text-align: center;
+
+    > li {
+        @include flexbox(row, nowrap, center, center, center);
+
+        margin: 5px 0px;
+        list-style: none;
+
+        > a {
+            @include fonte($second-font, 400, 14px, #FFF);
+            @include transition;
+
+            text-transform: uppercase;
+        }
+
+        &:after {
+            content: "";
+            width: 1px;
+            height: 20px;
+            display: block;
+            background-color: #FFF;
+            margin: 0px 10px;
+        }
+
+        &:hover,
+        &.active {
+            a {
+                color: #ca1849;
+            }
+        }
+
+        &:last-of-type {
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+
+.pp-viewing-page2,
+.pp-viewing-page3 {
+    #menu {
+        > li {
+            a {
+                color: #13225B;
+            }
+
+            &:after {
+                background-color: #13225B;
+            }
+
+            &:hover,
+            &.active {
+                a {
+                    color: #ca1849;
+                }
+            }
+        }
+    }
+}

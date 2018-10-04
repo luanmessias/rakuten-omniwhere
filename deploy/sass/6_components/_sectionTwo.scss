@@ -1,0 +1,51 @@
+#section2{
+    .pp-tableCell{
+        @include flexbox(column, nowrap, flex-start, center, center);
+    }
+    .logo{
+        @include box-sizing;
+        width: 100%;
+        text-align: center;
+        margin-top: 100px;
+        padding: 20px;
+        > img{
+            width: 100%;
+            max-width: 701px;
+            height: auto;
+        }
+        &:after{
+            content: "";
+            width: 53px;
+            height: 4px;
+            background-color: #b0194b;
+            display: block;
+            margin: 10px auto;
+        }
+    }
+
+    .desc{
+        text-align: center;
+        max-width: 701px;
+        width: 100%;
+        > span{
+            @include fonte($second-font, 400, 18px, #596572);
+            display: block;
+            padding: 10px;
+            text-align: center;
+        }
+    }
+
+    .plan{
+        @include box-sizing;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        padding: 20px;
+        > img{
+            width: 100%;
+            max-width: 1148px;
+            height: auto;
+        }
+    }
+
+}
